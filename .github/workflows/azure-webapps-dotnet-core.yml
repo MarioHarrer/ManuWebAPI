@@ -52,9 +52,9 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-nuget-
 
-      - name: Build with dotnet
+       - name: Build with dotnet
         working-directory: ./ManuWebAPI
-        run: dotnet build --configuration Release
+        run: dotnet build ./ManuWebAPI.csproj --configuration Release
 
       - name: dotnet publish
         working-directory: ./ManuWebAPI
