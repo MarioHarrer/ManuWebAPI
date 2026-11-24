@@ -53,11 +53,11 @@ jobs:
             ${{ runner.os }}-nuget-
 
       - name: Build with dotnet
-        working-directory: ./ManuWebAPI
+        working-directory: ./ManuWebAPI/ManuWebAPI
         run: dotnet build --configuration Release
 
       - name: dotnet publish
-        working-directory: ./ManuWebAPI
+        working-directory: ./ManuWebAPI/ManuWebAPI
         run: dotnet publish ./ManuWebAPI.csproj -c Release -o ${{env.DOTNET_ROOT}}/myapp
 
       - name: Upload artifact for deployment job
